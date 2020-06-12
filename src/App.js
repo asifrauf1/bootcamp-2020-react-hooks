@@ -19,7 +19,7 @@ function App() {
         <span> The room temperature is <strong>&lt;&lt; {roomTemp} &gt;&gt;</strong> </span>
         <button onClick ={() => setTemp(roomTemp - 1)}>-</button>
         <hr/>
-        <img height={300} alt="Room Image" src={isLit?"https://thumbs.dreamstime.com/b/modern-minimalist-sitting-room-interior-down-lights-grey-wall-above-upholstered-grey-sofa-ornamental-vases-40801051.jpghttps://thumbs.dreamstime.com/b/modern-minimalist-sitting-room-interior-down-lights-grey-wall-above-upholstered-grey-sofa-ornamental-vases-40801051.jpg":""}></img>
+        <img height={300} alt="Lit Room" src={isLit?"https://thumbs.dreamstime.com/b/modern-minimalist-sitting-room-interior-down-lights-grey-wall-above-upholstered-grey-sofa-ornamental-vases-40801051.jpghttps://thumbs.dreamstime.com/b/modern-minimalist-sitting-room-interior-down-lights-grey-wall-above-upholstered-grey-sofa-ornamental-vases-40801051.jpg":""}></img>
         
     </div>    
   );
