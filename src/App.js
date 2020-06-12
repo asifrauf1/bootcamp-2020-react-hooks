@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  let [isLit,setLit] = React.useState(true);
+  let [roomTemp, setTemp] = React.useState(22)
+  let brightness = isLit?"lit":"dark";
+  return (   
+    <div className={`room ${brightness}`}>
+    <h1>Room lights example with React state</h1>
+         The room is {isLit?"Lit":"dark"}
+        <br/>
+        <button onClick = {() => setLit(!isLit)}>Flip Switch</button>
+        <hr/>
+        <button onClick = {() => setLit(true)}>Lights On</button>
+        <button onClick={() => setLit(false)}>Lights Off</button>
+        <hr/>
+        <button onClick={() => setTemp(roomTemp+1)}>+</button>
+        <span> The room temperature is <strong>&lt;&lt; {roomTemp} &gt;&gt;</strong> </span>
+        <button onClick ={() => setTemp(roomTemp - 1)}>-</button>
+        <hr/>
+        <img height={300} widt src={isLit?"https://thumbs.dreamstime.com/b/modern-minimalist-sitting-room-interior-down-lights-grey-wall-above-upholstered-grey-sofa-ornamental-vases-40801051.jpghttps://thumbs.dreamstime.com/b/modern-minimalist-sitting-room-interior-down-lights-grey-wall-above-upholstered-grey-sofa-ornamental-vases-40801051.jpg":""}></img>
+        
+    </div>    
   );
 }
 
